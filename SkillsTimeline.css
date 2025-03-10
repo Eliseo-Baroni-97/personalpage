@@ -1,0 +1,65 @@
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.col-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #39bb9d;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-6 {
+  padding-left: 20px;
+}
+
+.timeline-line {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
+  border-top: 3px solid #39bb9d;
+  margin: 0;
+  position: relative;
+}
+
+.corner {
+  border: 3px solid #39bb9d;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.top-right {
+  left: 50%;
+  top: -50%;
+}
+
+.left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
