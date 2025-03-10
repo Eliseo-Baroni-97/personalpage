@@ -1,0 +1,50 @@
+/* En el archivo CSS */
+.nav-tabs .nav-link {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-tabs .nav-link:hover {
+    background-color: #ebeef0; /* Color de hover */
+  }
+  
+  .nav-tabs .nav-item.active .nav-link {
+    background-color: #ffffff; /* Color cuando la pestaña está activa */
+  }
+  
+  .tab-content {
+    margin-top: 20px;
+  }
+  
+  .tab-pane {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .tab-pane.show {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Mejoras en la visualización de los elementos dentro de las pestañas */
+  .tab-pane .col {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .tab-pane .fa {
+    font-size: 30px;
+    color: #3498db;
+    margin-right: 15px;
+  }
+  

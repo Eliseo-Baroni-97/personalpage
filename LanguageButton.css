@@ -1,0 +1,61 @@
+/* Contenedor del switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;  /* Aumentamos el ancho */
+    height: 46px; /* Aumentamos la altura */
+  }
+  
+  /* El fondo del switch */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Estilo del slider (la parte movible) */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+  
+  /* El círculo dentro del slider */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 36px;  /* Aumentamos el tamaño del círculo */
+    width: 36px;   /* Aumentamos el tamaño del círculo */
+    border-radius: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  /* Cuando el switch está activado (checked) */
+  input:checked + .slider {
+    background-color: #28a745; /* Verde */
+  }
+  
+  /* Cuando el switch está activado (checked), mueve el círculo */
+  input:checked + .slider:before {
+    transform: translateX(34px); /* Aumentamos el movimiento */
+  }
+  
+  /* Estilo del texto dentro del botón */
+  .language-text {
+    position: absolute;
+    top: 10px;   /* Ajustamos el margen superior */
+    left: 90px;  /* Ajustamos el margen izquierdo */
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+    font-weight: bold;
+    color: #555;
+  }
+  

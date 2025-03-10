@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top ${scrolling ? "bg-dark" : "bg-transparent"}`}
+      className={`navbar navbar-expand-lg fixed-top ${scrolling ? "bg-success" : "bg-transparent"}`} // bg-success para el verde
       style={{
         padding: "1.5rem 0", // Aumenta el espacio vertical del navbar
         minHeight: "100px", // Altura mínima del navbar
