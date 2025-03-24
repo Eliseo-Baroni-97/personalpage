@@ -7,11 +7,14 @@ const LanguageButton = () => {
 
   return (
     <label className="switch">
-      <input type="checkbox" checked={language === "en"} onChange={toggleLanguage} />
-      <span className="slider"></span>
-      <span className="language-text">
-        {language === "en" ? "Español" : "English"}
-      </span>
+      <input
+        type="checkbox"
+        checked={language === "en"}
+        onChange={toggleLanguage}
+      />
+      <span
+        className={`slider ${language === "en" ? "usa" : "argentina"}`}
+      ></span>
     </label>
   );
 };

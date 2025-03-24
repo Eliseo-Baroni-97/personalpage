@@ -1,4 +1,10 @@
 /* En el archivo CSS */
+.k {
+  max-height: 500px; 
+
+}
+
+
 .nav-tabs .nav-link {
     color: #fff;
     border: none;

@@ -39,12 +39,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top ${scrolling ? "bg-success" : "bg-transparent"}`} // bg-success para el verde
-      style={{
-        padding: "1.5rem 0", // Aumenta el espacio vertical del navbar
-        minHeight: "100px", // Altura mínima del navbar
-      }}
-    >
+  className={`navbar navbar-expand-lg fixed-top ${scrolling ? "bg-success" : "bg-transparent"}`}
+  style={{
+    padding: "1.5rem 0", // Aumenta el espacio vertical del navbar
+    minHeight: "100px", // Altura mínima del navbar
+    backgroundColor: scrolling ? "#39bb9d" : "transparent" // Aquí se cambia el color de fondo
+  }}
+>
+
       <div className="container-fluid">
         {/* Menú de navegación alineado a la izquierda */}
         <ul className="navbar-nav me-auto d-flex flex-row gap-4">
