@@ -1,0 +1,75 @@
+/* Contenedor del switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Reducido el ancho del switch */
+  height: 36px; /* Reducida la altura del switch */
+}
+
+/* El fondo del switch */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Estilo del slider (la parte movible) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+/* El círculo dentro del slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 28px; /* Tamaño del círculo ajustado */
+  width: 28px;  /* Tamaño del círculo ajustado */
+  border-radius: 50px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(233, 233, 233); /* Color predeterminado */
+  transition: 0.4s;
+  background-size: contain; /* Ajusta las imágenes al contenedor respetando las proporciones */
+  background-position: center;
+  background-repeat: no-repeat; /* Evita que se repitan las imágenes */
+}
+
+/* Cuando el switch está activado (checked) */
+input:checked + .slider {
+  background-color: #fcfcfc;
+}
+
+/* Cuando el switch está activado (checked), mueve el círculo */
+input:checked + .slider:before {
+  transform: translateX(26px); /* Ajuste de movimiento para el tamaño reducido */
+}
+
+/* Estilo del texto dentro del botón */
+.language-text {
+  position: absolute;
+  top: 6px;
+  left: 70px;
+  font-size: 14px; /* Fuente más pequeña para ajustarse */
+  font-weight: bold;
+  color: #555;
+}
+
+/* Clase para la bandera de Argentina */
+.switch input:not(:checked) + .slider:before {
+  background-image: url("/argentina.png"); /* Bandera de Argentina */
+  background-size: 150%; /* Ajuste de tamaño de la bandera de Argentina */
+  background-position: center;
+}
+
+/* Clase para la bandera de USA */
+.slider.usa:before {
+  background-image: url("/usa.png");
+}

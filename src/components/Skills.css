@@ -1,0 +1,62 @@
+/* Estilo de las pestañas */
+.nav-tabs .nav-link {
+  color: #39bb9d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en las pestañas */
+.nav-tabs .nav-link:hover {
+  background-color: #ebeef0; /* Color de hover */
+}
+
+.nav-link.active {
+  background-color: transparent !important; /* Asegura que el fondo sea transparente */
+  color: #39bb9d !important; /* Cambia el color del texto a blanco */
+}
+
+/* Estilo para la pestaña activa */
+.nav-tabs .nav-item.active .nav-link {
+  background-color: #ffffff; /* Color cuando la pestaña está activa */
+}
+
+/* Eliminar borde azul en las pestañas al hacer clic */
+.nav-tabs .nav-link:focus {
+  outline: none; /* Elimina el borde de enfoque */
+}
+
+/* Contenido de las pestañas */
+.tab-content {
+  margin-top: 20px;
+}
+
+/* Estilo de las pestañas */
+.tab-pane {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.tab-pane.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Estilo de las columnas dentro de las pestañas */
+.tab-pane .col {
+  padding: 15px;
+  display: flex;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Estilo de los iconos */
+.tab-pane .fa {
+  font-size: 30px;
+  color: #39bb9d;
+  margin-right: 15px;
+}

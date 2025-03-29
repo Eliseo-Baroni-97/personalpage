@@ -1,0 +1,35 @@
+/* Estilo del contenedor del banner */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Imagen que ocupa todo el espacio sin deformarse */
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre el área sin distorsionarse */
+}
+
+/* Contenido centrado sobre la imagen */
+.banner-content {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: transparent; /* Elimina el fondo oscuro */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.banner h1 {
+  font-size: 4rem;
+  margin: 0;
+}

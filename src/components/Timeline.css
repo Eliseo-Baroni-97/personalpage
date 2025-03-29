@@ -1,0 +1,121 @@
+body {
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  width: 100%; /* Se expande al ancho de la tarjeta mayor */
+  max-width: none; /* Elimina cualquier restricción de ancho */
+  border: none;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 60px 0;
+}
+
+/* Global ::before */
+.card::before {
+  z-index: 1; /* Un valor alto para que esté delante */
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #39bb9d;
+}
+
+/* Tarjetas impares: borde en el lado izquierdo con línea más gruesa */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -7px;
+  bottom: -7px;
+  border-width: 7px 0 7px 7px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Tarjetas pares: borde en el lado derecho con línea más gruesa */
+.card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 7px 7px 7px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Remover borde superior en el primer card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+.timeline {
+  max-height: 500px; 
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  padding-left: 30px; 
+  max-width: 90%; 
+}
+
+.title {
+  color: #39bb9d;
+  position: relative;
+}
+
+/* Punto del timeline */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid #39bb9d;
+  z-index: 11;
+}
+
+.card:nth-child(even) > .info > .title {
+  text-align: right;
+}
+
+.card:nth-child(odd) > .info > .title::before {
+  left: -45px;
+}
+
+.card:nth-child(even) > .info > .title::before {
+  right: -45px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  background: rgb(252, 252, 253);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Para pantallas pequeñas */
+@media only screen and (max-width: 400px) {
+  .card:nth-child(odd)::before {
+    top: -5px;
+    bottom: -5px;
+  }
+}
