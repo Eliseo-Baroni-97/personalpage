@@ -1,20 +1,17 @@
-.banner {
-  position: relative;
-  display: flex;
-}
 /* Imagen que ocupa todo el espacio sin deformarse */
-
-
 .full-screen-img {
   width: 100vw; /* 100% del ancho de la pantalla */
+  height: auto; /* Ajuste la altura para que no sobrecargue la pantalla */
+  max-height: 100vh; /* Asegura que la altura máxima no sea mayor que el tamaño de la pantalla */
   object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  object-position: center top; /* Centra la imagen en la parte superior */
 }
 
 /* Contenido centrado sobre la imagen */
 .banner-content {
   position: absolute;
   top: 40%;
-  left: 45%; /* Cambié a 50% para centrar en el eje horizontal */
+  left: 50%;
   transform: translateX(-50%); /* Para asegurar que el contenido esté centrado */
   text-align: center;
   width: 80%; /* Aseguramos que el contenido no ocupe todo el ancho en pantallas grandes */
@@ -23,31 +20,36 @@
 /* Ajuste para pantallas medianas (Tablets) */
 @media (max-width: 768px) {
   .banner-content {
-    top: 60%; 
-    width: 90%; 
+    top: 50%; /* Baja el contenido un poco */
+    width: 90%;
   }
 
   .banner h1 {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
   }
 
   .banner h2 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 }
 
 /* Ajuste para pantallas pequeñas (Móviles) */
 @media (max-width: 576px) {
+  .full-screen-img {
+    height: 80vh; /* Ajusta la altura de la imagen para que no ocupe toda la pantalla */
+    object-position: center 20%; /* Baja más la imagen para ver la parte inferior */
+  }
+
   .banner-content {
-    top: 50%; 
-    width: 90%; 
+    top: 35%; /* Baja el contenido un poco más */
+    width: 90%;
   }
 
   .banner h1 {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
   }
 
   .banner h2 {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
   }
 }

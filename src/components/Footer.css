@@ -2,6 +2,8 @@
     text-align: center;
     padding: 1rem;
     background-color: #333;
-    color: white;
   }
   
+  footer.footer p {
+    color: rgb(255, 255, 255) !important;
+  }

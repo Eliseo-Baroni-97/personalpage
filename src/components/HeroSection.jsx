@@ -20,7 +20,7 @@ const HeroSection = () => {
   const t = translations[language];
 
   return (
-    <section className="hero-section container-fluid">
+    <section className="hero-section container-fluid" id="profile">
       <div className="row d-flex align-items-center justify-content-center">
         
         {/* Columna de la imagen */}

@@ -23,15 +23,15 @@ const App = () => {
       <HeroSection /> 
       <SectionTitle titleKey="datosPersonales" icon="fa-address-card" />
       <PersonalData />
-      <SectionTitle titleKey="formacion" icon="fa-graduation-cap" /> 
+      <SectionTitle titleKey="formacion" icon="fa-graduation-cap" id="education"/> 
       <Timeline /> 
-      <SectionTitle titleKey="habilidades" icon="fa-regular fa-star" />
+      <SectionTitle titleKey="habilidades" icon="fa-regular fa-star" id="skills"  />
       <Skills />
-      <SectionTitle titleKey="portafolio" icon="fa-solid fa-briefcase" />
+      <SectionTitle titleKey="portafolio" icon="fa-solid fa-briefcase" id="projects"/>
       <Portfolio /> 
-      <SectionTitle titleKey="contacto" icon="fa-paper-plane" /> 
+      <SectionTitle titleKey="contacto" icon="fa-paper-plane"  id="contact"/> 
       <Contact /> 
-      {/* <Footer /> */}
+      <Footer />
     </LanguageProvider>
   );
 };

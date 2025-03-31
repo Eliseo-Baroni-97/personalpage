@@ -1,0 +1,34 @@
+/* Estilo para la barra de navegación */
+.navbar {
+    padding: 1.5rem 0;
+    min-height: 100px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo para la barra de navegación cuando se hace scroll (pantallas grandes) */
+  .navbar-scrolled {
+    background-color: #00bc9d !important;
+  }
+  
+  /* Estilo cuando no se hace scroll (en pantallas grandes) */
+  .bg-transparent {
+    background-color: transparent !important;
+  }
+  
+  /* Para pantallas pequeñas, el navbar siempre tiene fondo sólido */
+  @media (max-width: 991px) {
+    .navbar {
+      background-color: #00bc9d !important;  /* Siempre verde en móviles */
+    }
+  }
+  
+  /* Estilo para el botón hamburguesa */
+  .navbar-toggler {
+    border-color: #f6f7f6; /* Cambia el color del borde */
+    background-color: aliceblue;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #ffffff; /* Botón hamburguesa blanco */
+  }
+  
