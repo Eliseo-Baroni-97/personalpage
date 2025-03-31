@@ -1,0 +1,17 @@
+/* Asegúrate de usar .cardcustom para hacerla responsive */
+@media only screen and (max-width: 767px) {
+    .cardcustom {
+      width: 100% !important;  /* Aplica 100% de ancho para pantallas pequeñas */
+    }
+    
+    /* Ajuste adicional en caso que sea necesario */
+    .form-group input,
+    .form-group textarea {
+      width: 100% !important;  /* Asegura que los campos también se expandan */
+    }
+  
+    .btn {
+      width: 100% !important;  /* El botón también se expande */
+    }
+  }
+  

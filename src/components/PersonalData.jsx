@@ -1,14 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next"; // Usamos el hook para las traducciones
 import Card from "./Card";
+import "./PersonalData.css"; // Asegúrate de importar el archivo CSS
 
 const PersonalData = () => {
   const { t } = useTranslation(); // Usamos el hook t para acceder a las traducciones
 
   return (
     <section className="d-flex justify-content-center align-items-center">
-      <Card>
-        <ul className="list-unstyled">
+      {/* Aplicamos la clase personalizada .card-custom */}
+      <Card className="mx-0 card-custom">
+        <ul className="list-unstyled ">
           {[ 
             { icon: "fa-cake-candles", text: t("fechaNacimiento") },
             { icon: "fa-id-card", text: t("dni") },
@@ -27,3 +29,4 @@ const PersonalData = () => {
 };
 
 export default PersonalData;
+

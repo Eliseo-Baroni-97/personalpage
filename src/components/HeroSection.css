@@ -1,30 +1,31 @@
 /* Contenedor principal de la sección Hero */
 .hero-section {
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  /* Añade un pequeño espacio entre la tarjeta y el texto */
-  padding: 3rem 1rem;
-  height: 100vh;
-  /* Asegura que ocupe toda la altura de la pantalla */
+  justify-content: center;
+  padding: 50px 20px; /* Espacio para evitar que toque los bordes */
+  overflow: hidden;
 }
 
-/* Contenedor de la flip-card */
+/* Contenedor de la imagen y el texto */
+.row {
+  width: 100%;
+  max-width: 1200px; /* Evita que los elementos se expandan demasiado en pantallas grandes */
+}
+
+/* Contenedor de la imagen */
 .flip-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  /* Añade espacio entre los elementos (flip-card y texto) */
 }
 
 /* Tarjeta de flip */
 .flip-card {
-  width: 40rem; /* Ajustado a un tamaño más adecuado */
-  height: 40rem; /* Ajustado a un tamaño más adecuado */
+  width: 300px; /* Ajustado a un tamaño adecuado */
+  height: 300px;
   perspective: 1000px;
-  /* Para el efecto 3D */
 }
 
 .flip-card-inner {
@@ -51,47 +52,74 @@
   left: 0;
   backface-visibility: hidden;
   border-radius: 50%;
-  /* Hace que la tarjeta sea redonda */
 }
 
 .flip-card-back {
   transform: rotateY(180deg);
   z-index: 1;
-  /* Mantén la parte posterior detrás */
 }
 
-/* Asegura que las imágenes en la tarjeta sean circulares */
+/* Asegura que las imágenes dentro de la flip-card sean circulares y no se distorsionen */
 .flip-card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que las imágenes se ajusten correctamente sin distorsionarse */
-  border-radius: 50%; /* Mantiene las imágenes redondas */
-  /* Eliminar height: 100% para evitar el estiramiento vertical */
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-/* Estilo para el contenedor de texto */
+/* Contenedor de texto */
 .text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  color: rgb(0, 0, 0);
-  /* Color del texto */
+  max-width: 600px; /* Evita que el texto se extienda demasiado */
+  width: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-align: start;
 }
 
 /* Título */
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #000;
 }
 
-/* Estilo para el párrafo */
+/* Párrafo */
 p {
   font-size: 1.25rem;
   line-height: 1.6;
+  color: #333;
 }
 
-/* Ajuste en los botones */
+/* Botón */
 .botones button {
   margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+/* 🔹 RESPONSIVE: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .flip-card {
+    width: 250px;
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }

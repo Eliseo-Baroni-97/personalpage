@@ -5,7 +5,7 @@ const SectionTitle = ({ titleKey, icon }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="px-5 d-flex align-items-center mb-2 p-0">
+    <div className=" d-flex align-items-center mb-2 px-sm-0 px-md-0 px-lg-5 ">
       <div className="p-1">
         <i className={`fa-solid ${icon} fa-xl`}></i>
       </div>

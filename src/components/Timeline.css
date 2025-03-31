@@ -113,9 +113,13 @@ body {
 
 
 /* Para pantallas pequeñas */
-@media only screen and (max-width: 400px) {
-  .card:nth-child(odd)::before {
-    top: -5px;
-    bottom: -5px;
+@media only screen and (max-width: 767px) {
+  .cardcustom {
+    width: 100% !important;  /* Aplica 100% de ancho para pantallas pequeñas */
+  }
+
+  /* También puedes ajustar el padding y otras propiedades para mejorar la apariencia */
+  .timeline {
+    max-width: 100% !important;  /* Asegura que la timeline ocupe todo el ancho */
   }
 }

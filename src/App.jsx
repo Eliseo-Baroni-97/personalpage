@@ -1,5 +1,6 @@
 import React from "react";
 import { LanguageProvider } from "./context/LanguageContext";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -17,21 +18,20 @@ import Contact from "./components/Contact";
 const App = () => {
   return (
     <LanguageProvider>
-
       <Banner />
       <Navbar />
       <HeroSection /> 
-      <SectionTitle titleKey="datosPersonales" icon="fa-address-card" /> 
-      <PersonalData /> 
-      <SectionTitle titleKey="formacion" icon="fa-graduation-cap" />
+      <SectionTitle titleKey="datosPersonales" icon="fa-address-card" />
+      <PersonalData />
+      <SectionTitle titleKey="formacion" icon="fa-graduation-cap" /> 
       <Timeline /> 
       <SectionTitle titleKey="habilidades" icon="fa-regular fa-star" />
-      <Skills /> 
+      <Skills />
       <SectionTitle titleKey="portafolio" icon="fa-solid fa-briefcase" />
       <Portfolio /> 
       <SectionTitle titleKey="contacto" icon="fa-paper-plane" /> 
       <Contact /> 
-      <Footer />
+      {/* <Footer /> */}
     </LanguageProvider>
   );
 };

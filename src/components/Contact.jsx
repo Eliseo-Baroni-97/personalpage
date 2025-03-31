@@ -2,13 +2,14 @@ import React from "react";
 import Card from "./Card"; // Usamos el componente Card para el contenedor
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useTranslation } from "react-i18next";
+import "./Contact.css";
 
 const Contact = () => {
   const { t } = useTranslation();
 
   return (
     <div className="d-flex justify-content-center align-items-center">
-      <Card className="p-5 bg-white rounded shadow mb-5">
+      <Card className="p-5 bg-white rounded shadow mb-5 cardcustom">
         <p>{t("description2")}</p>
         <form
           className="mt-4"

@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next"; // Importamos el hook useTranslation
 import Card from "./Card"; // Reutilizamos el componente Card para las tarjetas principales y pequeñas
+import "./Portfolio.css";
 
 const Portfolio = () => {
   const { t } = useTranslation(); // Usamos el hook t para las traducciones
@@ -49,7 +50,7 @@ const Portfolio = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center min-vh-100">
-      <Card className="p-5 bg-white rounded shadow mb-5">
+      <Card className="p-5 bg-white rounded shadow mb-5 cardcustom">
         <div className="row justify-content-center">
           {projects.map((project) => (
             <div

@@ -45,7 +45,7 @@ const Skills = () => {
 
   return (
     <div className="d-flex justify-content-center">
-      <Card className="p-5 bg-white rounded shadow mb-5">
+      <Card className="p-5 bg-white rounded shadow mb-5 cardcustom">
         <ul className="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
           {Object.keys(skillsData).map((tab) => (
             <li key={tab} className="nav-item flex-sm-fill">

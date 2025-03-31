@@ -1,35 +1,53 @@
-/* Estilo del contenedor del banner */
 .banner {
   position: relative;
-  width: 100%;
-  height: 100vh; /* Ocupa toda la altura del viewport */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
-
 /* Imagen que ocupa todo el espacio sin deformarse */
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cubre el área sin distorsionarse */
+
+
+.full-screen-img {
+  width: 100vw; /* 100% del ancho de la pantalla */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
 }
 
 /* Contenido centrado sobre la imagen */
 .banner-content {
   position: absolute;
-  top: 70%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 45%; /* Cambié a 50% para centrar en el eje horizontal */
+  transform: translateX(-50%); /* Para asegurar que el contenido esté centrado */
   text-align: center;
-  color: white;
-  background-color: transparent; /* Elimina el fondo oscuro */
-  padding: 20px;
-  border-radius: 8px;
+  width: 80%; /* Aseguramos que el contenido no ocupe todo el ancho en pantallas grandes */
 }
 
-.banner h1 {
-  font-size: 4rem;
-  margin: 0;
+/* Ajuste para pantallas medianas (Tablets) */
+@media (max-width: 768px) {
+  .banner-content {
+    top: 60%; 
+    width: 90%; 
+  }
+
+  .banner h1 {
+    font-size: 2.5rem; 
+  }
+
+  .banner h2 {
+    font-size: 1.5rem; 
+  }
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 576px) {
+  .banner-content {
+    top: 50%; 
+    width: 90%; 
+  }
+
+  .banner h1 {
+    font-size: 1.8rem; 
+  }
+
+  .banner h2 {
+    font-size: 1.2rem; 
+  }
 }

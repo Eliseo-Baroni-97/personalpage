@@ -1,0 +1,16 @@
+/* PersonalData.css */
+
+/* Clase predeterminada para pantallas grandes */
+.card-custom {
+    width: auto; /* No ocupa todo el ancho en pantallas grandes */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 767px) {
+    .card-custom {
+      width: 100% !important; /* Asegúrate de que esto se aplique */
+    }
+  }
+  

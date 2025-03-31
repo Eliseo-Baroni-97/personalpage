@@ -27,28 +27,36 @@ const Navbar = () => {
       }}
     >
       <div className="container-fluid">
-        <ul className="navbar-nav me-auto d-flex flex-row gap-4">
-          <li className="nav-item">
-            <a className="nav-link text-light fs-5" href="#home">{t("home")}</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-light fs-5" href="#profile">{t("profile")}</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-light fs-5" href="#education">{t("education")}</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-light fs-5" href="#skills">{t("skills")}</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-light fs-5" href="#projects">{t("projectsLink")}</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-light fs-5" href="#contact">{t("contact")}</a>
-          </li>
-        </ul>
+        {/* Botón de colapso para pantallas pequeñas */}
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        
+        {/* Navbar contenido */}
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto d-flex flex-row gap-4">
+            <li className="nav-item">
+              <a className="nav-link text-light fs-5" href="#home">{t("home")}</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fs-5" href="#profile">{t("profile")}</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fs-5" href="#education">{t("education")}</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fs-5" href="#skills">{t("skills")}</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fs-5" href="#projects">{t("projectsLink")}</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fs-5" href="#contact">{t("contact")}</a>
+            </li>
+          </ul>
+        </div>
 
-
+        {/* Icons de redes sociales */}
         <div className="d-flex align-items-center gap-4">
           <a href="https://github.com/Eliseo-Baroni-97?tab=repositories" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-github text-light fa-2xl"></i>
