@@ -19,8 +19,8 @@ const Timeline = () => {
 
   return (
     <div className="d-flex justify-content-center">
-      <Card title={t("timelineFormacion")} className="  mx-0 card-custom">
-        <div className="outer">
+      <Card title={t("timelineFormacion")} className="mx-0 card-custom timeline-content">
+        <div className="">
           {timelineData.map((item, index) => (
             <TimelineItem 
               key={index} 

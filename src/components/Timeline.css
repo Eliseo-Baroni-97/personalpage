@@ -63,13 +63,19 @@ body {
   border-bottom-right-radius: 0;
 }
 
+/* Estilo para el contenedor del Timeline */
+.timeline-content {
+  max-height: 500px; /* Ajusta la altura máxima según sea necesario */
+  overflow-y: auto;  /* Agrega el scroll vertical */
+  padding-left: 30px;
+  max-width: 100%;
 
-.timeline {
-  max-height: 500px; 
-  overflow-y: auto; 
-  overflow-x: hidden; 
-  padding-left: 30px; 
-  max-width: 90%; 
+  max-height: 500px; /* Ajusta la altura máxima según sea necesario */
+  overflow-y: auto;  /* Agrega el scroll vertical */
+  overflow-x: hidden; /* Elimina el scroll horizontal */
+  padding-left: 30px;
+  max-width: 100%;  /* Asegura que no haya desbordes horizontales */
+
 }
 
 .title {
@@ -111,7 +117,6 @@ body {
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Para pantallas pequeñas */
 @media only screen and (max-width: 767px) {
   .cardcustom {
@@ -119,7 +124,7 @@ body {
   }
 
   /* También puedes ajustar el padding y otras propiedades para mejorar la apariencia */
-  .timeline {
+  .timeline-content {
     max-width: 100% !important;  /* Asegura que la timeline ocupe todo el ancho */
   }
 }

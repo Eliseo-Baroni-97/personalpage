@@ -12,7 +12,7 @@ const Portfolio = () => {
       description: t("projects.1.description"),
       url: "https://maravilloso-mundo.netlify.app/index.html",
       imgSrc: "Maravilloso-mundo.jpg",
-      badgeClass: "badge-danger",
+      badgeClass: "bg-danger", 
       badgeText: t("projects.1.badgeText"),
       type: t("projects.1.type"),
     },
@@ -22,7 +22,7 @@ const Portfolio = () => {
       description: t("projects.2.description"),
       url: "https://rollingnews.netlify.app/",
       imgSrc: "Rolling-news.jpg",
-      badgeClass: "badge-danger",
+      badgeClass: "bg-danger", 
       badgeText: t("projects.2.badgeText"),
       type: t("projects.2.type"),
     },
@@ -32,7 +32,7 @@ const Portfolio = () => {
       description: t("projects.3.description"),
       url: "#",
       imgSrc: "Rolling-Ubisoft.jpg",
-      badgeClass: "badge-danger",
+      badgeClass: "bg-danger", 
       badgeText: t("projects.3.badgeText"),
       type: t("projects.3.type"),
     },
@@ -42,10 +42,20 @@ const Portfolio = () => {
       description: t("projects.4.description"),
       url: "https://github.com/Eliseo-Baroni-97/Discord-bot",
       imgSrc: "discord.png",
-      badgeClass: "badge-primary",
+      badgeClass: "bg-primary", 
       badgeText: t("projects.4.badgeText"),
       type: t("projects.4.type"),
     },
+    {
+      id: 5,
+      title: t("projects.5.title"),
+      description: t("projects.5.description"),
+      url: "https://github.com/Eliseo-Baroni-97/Discord-bot",
+      imgSrc: "webPersonal.png",
+      badgeClass: "bg-primary", 
+      badgeText: t("projects.5.badgeText"),
+      type: t("projects.5.type"),
+    }
   ];
 
   return (
@@ -102,4 +112,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
