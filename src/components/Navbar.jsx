@@ -35,13 +35,28 @@ const Navbar = () => {
       <div className="container-fluid">
         {/* Redes sociales y cambio de idioma - SIEMPRE FIJOS */}
         <div className="position-absolute top-0 end-0 d-flex align-items-center gap-3 p-3">
-          <a href="https://github.com/Eliseo-Baroni-97?tab=repositories" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/Eliseo-Baroni-97?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+          >
             <i className="fa-brands fa-github text-light fa-2xl"></i>
           </a>
-          <a href="https://www.linkedin.com/in/eliseo-baroni-b14314164/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/eliseo-baroni-b14314164/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+          >
             <i className="fa-brands fa-linkedin text-light fa-2xl"></i>
           </a>
-          <a href="https://api.whatsapp.com/send/?phone=543815123346&text&app_absent=0" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://api.whatsapp.com/send/?phone=543815123346&text&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp contact"
+          >
             <i className="fa-brands fa-whatsapp text-light fa-2xl"></i>
           </a>
           <LanguageButton />
