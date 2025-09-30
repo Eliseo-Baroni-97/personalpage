@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { LanguageProvider } from "./context/LanguageContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,9 +17,10 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact"; 
 
 const App = () => {
+  const { t } = useTranslation();
   return (
     <LanguageProvider>
-      <Banner />
+      <Banner altText={t("bannerAlt")} />
       <Navbar />
       <HeroSection /> 
       <SectionTitle titleKey="datosPersonales" icon="fa-address-card" />
