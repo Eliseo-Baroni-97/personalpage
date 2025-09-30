@@ -106,6 +106,7 @@ i18next
           subject: "Subject",
           message: "Your message",
           send: "Send",
+          messageSent: "Message sent successfully!",
           copyright: "Developed with ❤️ "
 
         },
@@ -210,6 +211,7 @@ i18next
           subject: "Asunto",
           message: "Tu mensaje",
           send: "Enviar",
+          messageSent: "¡Mensaje enviado con éxito!",
           copyright: "Desarrollado con ❤️ "
 
 
