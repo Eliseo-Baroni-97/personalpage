@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Card"; // Usamos el componente Card para el contenedor
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useTranslation } from "react-i18next";
@@ -6,16 +6,19 @@ import "./Contact.css";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    event.target.reset();
+    setIsSubmitted(true);
+  };
 
   return (
     <div className="d-flex justify-content-center align-items-center">
       <Card className="p-5 bg-white rounded shadow mb-5 cardcustom">
         <p>{t("description2")}</p>
-        <form
-          className="mt-4"
-          action="https://formspree.io/f/myyoawve"
-          method="POST"
-        >
+        <form className="mt-4" onSubmit={handleSubmit}>
           <div className="form-group mb-4">
             <input
               type="email"
@@ -46,6 +49,11 @@ const Contact = () => {
               {t("send")}
             </button>
           </div>
+          {isSubmitted && (
+            <div className="alert alert-success mt-4" role="status" aria-live="polite">
+              {t("messageSent")}
+            </div>
+          )}
         </form>
       </Card>
     </div>
