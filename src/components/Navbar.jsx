@@ -51,14 +51,6 @@ const Navbar = () => {
           >
             <i className="fa-brands fa-linkedin text-light fa-2xl"></i>
           </a>
-          <a
-            href="https://api.whatsapp.com/send/?phone=543815123346&text&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp contact"
-          >
-            <i className="fa-brands fa-whatsapp text-light fa-2xl"></i>
-          </a>
           <LanguageButton />
         </div>
 
