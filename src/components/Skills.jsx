@@ -17,8 +17,9 @@ const Skills = () => {
       { icon: "fa-brands fa-bootstrap", name: "bootstrap" },
       { icon: "fa-brands fa-square-github", name: "git" },
       { icon: "fa-brands fa-js", name: "javascript" },
-      { icon: "fa-regular fa-brain-circuit", name: "desarrolloIA" },
-      { icon: "fa-brands fa-openai", name: "openai" },
+      { icon: "fa-brands fa-openai", name: "desarrolloIA" },
+      { icon: "fa-laptop-code", name: "localstorage" },
+
       { icon: "fa-laptop-code", name: "localstorage" },
       { icon: "fa-solid fa-mug-saucer", name: "java" },
       { icon: "fa-brands fa-react", name: "react" },
@@ -78,3 +79,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
