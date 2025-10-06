@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { LanguageProvider } from "./context/LanguageContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -19,7 +18,7 @@ import Contact from "./components/Contact";
 const App = () => {
   const { t } = useTranslation();
   return (
-    <LanguageProvider>
+    <>
       <Banner altText={t("bannerAlt")} />
       <Navbar />
       <HeroSection /> 
@@ -34,7 +33,7 @@ const App = () => {
       <SectionTitle titleKey="contacto" icon="fa-paper-plane"  id="contact"/> 
       <Contact /> 
       <Footer />
-    </LanguageProvider>
+    </>
   );
 };
 

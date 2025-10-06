@@ -1,19 +1,24 @@
-import React from "react";
-import { useLanguage } from "../context/LanguageContext";
-import "./LanguageButton.css"; // Importa el archivo de estilo
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import './LanguageButton.css';
 
 const LanguageButton = () => {
-  const { language, toggleLanguage } = useLanguage();
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'es' ? 'en' : 'es';
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <label className="switch">
       <input
         type="checkbox"
-        checked={language === "en"}
+        checked={i18n.language === 'en'}
         onChange={toggleLanguage}
       />
       <span
-        className={`slider ${language === "en" ? "usa" : "argentina"}`}
+        className={`slider ${i18n.language === 'en' ? 'usa' : 'argentina'}`}
       ></span>
     </label>
   );

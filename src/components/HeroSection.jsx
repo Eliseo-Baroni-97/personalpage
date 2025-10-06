@@ -1,23 +1,9 @@
 import React from "react";
 import "./HeroSection.css";
-import { useLanguage } from "../context/LanguageContext";
-
-const translations = {
-  es: {
-    name: "Sobre mí",
-    description: "Desarrollador full stack con experiencia en programación web. Dominio básico de varios lenguajes de programación. Capaz de autogestión eficaz en proyectos independientes y buenas habilidades de colaboración dentro de un equipo productivo.",
-    downloadCV: "Descargar CV",
-  },
-  en: {
-    name: "About me",
-    description: "Full stack developer with web programming experience. Basic mastery of various programming languages. Capable of effective self-management in independent projects and strong collaboration skills within a productive team.",
-    downloadCV: "Download CV",
-  },
-};
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { t } = useTranslation();
 
   return (
     <section className="hero-section container-fluid" id="profile">
@@ -45,10 +31,10 @@ const HeroSection = () => {
 
         {/* Columna del texto */}
         <div className="col-md-6 text-container">
-          <h1>{t.name}</h1>
-          <p className="my-4">{t.description}</p>
+          <h1>{t('name')}</h1>
+          <p className="my-4">{t('description')}</p>
           <a href="https://drive.google.com/file/d/1mrIBSq0ASkKxcSVhk6bIHdTfly5Tkc9J/view?usp=sharing">
-            <button className="btn btn-outline-success btn-lg">{t.downloadCV}</button>
+            <button className="btn btn-outline-success btn-lg">{t('downloadCV')}</button>
           </a>
         </div>
 
