@@ -49,11 +49,12 @@ const App = () => {
       <SectionTitle titleKey="formacion" icon="fa-graduation-cap" id="education"/> 
       <Timeline titleKey="timelineFormacion" items={educationItems} />
 
+      <SectionTitle titleKey="habilidades" icon="fa-regular fa-star" id="skills"  />
+      <Skills />
+
       <SectionTitle titleKey="experienciaLaboral" icon="fa-briefcase" id="experience"/> 
       <Timeline titleKey="experienciaLaboral" items={experienceItems} />
 
-      <SectionTitle titleKey="habilidades" icon="fa-regular fa-star" id="skills"  />
-      <Skills />
       <SectionTitle titleKey="portafolio" icon="fa-solid fa-briefcase" id="projects"/>
       <Portfolio /> 
       <SectionTitle titleKey="contacto" icon="fa-paper-plane"  id="contact"/> 
