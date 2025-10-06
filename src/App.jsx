@@ -23,6 +23,7 @@ const App = () => {
     { titleKey: "licenciaturaCienciasComputacion", textKey: "licenciaturaCienciasComputacionText" },
     { titleKey: "iaCourseTitle", textKey: "iaCourseText", dateKey: "iaCourseDate" },
     { titleKey: "englishForDevelopersTitle", textKey: "englishForDevelopersText", dateKey: "englishForDevelopersDate" },
+    { titleKey: "jovenInversorTitle", textKey: "jovenInversorText", dateKey: "jovenInversorDate" },
     { titleKey: "programadorFullStack", textKey: "programadorFullStackText" },
     { titleKey: "cursoInglesAdultos", textKey: "cursoInglesAdultosText" },
     { titleKey: "analistaProgramador", textKey: "analistaProgramadorText" },
