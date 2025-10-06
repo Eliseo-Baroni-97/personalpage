@@ -9,7 +9,7 @@ const Timeline = ({ titleKey, items }) => {
 
   return (
     <div className="d-flex justify-content-center">
-      <Card title={t(titleKey)} className="mx-0 card-custom timeline-content">
+      <Card title={t(titleKey)} className="p-5 mx-0 card-custom timeline-content">
         <div className="">
           {items.map((item, index) => {
             // Construimos el texto final. Si hay fecha, la añadimos al principio.
