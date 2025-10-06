@@ -21,6 +21,7 @@ i18next
           "downloadCV": "Download CV",
           "datosPersonales": "Personal Data",
           "formacion": "Education",
+          "experienciaLaboral": "Work Experience",
           "timelineFormacion": "Education Timeline",
           "habilidades": "Skills",
           "portafolio": "Portfolio",
@@ -42,6 +43,9 @@ i18next
           "tecnicoITText": "Escuela Técnica N°5. 2015. Technical secondary education with knowledge in computing and technology.",
           "tecnicoReparacionPC": "PC Repair Technician",
           "tecnicoReparacionPCText": "UTN. 2014. Hardware diagnostics and repair, operating systems, and network troubleshooting.",
+          "seccionAlumnosTitle": "Student Section",
+          "seccionAlumnosDescription": "I handle and manage student procedures. Additionally, I provide technological support and technical assistance: diagnosing and resolving incidents, maintaining equipment and networks, and optimizing processes with digital tools.",
+          "seccionAlumnosDate": "2022 - Present",
           "habilidadesDesarrollo": "Development",
           "habilidadesDiseno": "Design",
           "habilidadesPersonal": "Personal",
@@ -72,36 +76,11 @@ i18next
           "herramientasDigitales": "Digital tool proficiency",
           "ingles": "English",
           "projects": {
-            "1": {
-              "title": "Wonderful World",
-              "description": "A travel blog project inviting us to discover different places around the world.",
-              "badgeText": "Rolling Project",
-              "type": "Travel Blog"
-            },
-            "2": {
-              "title": "Rolling News",
-              "description": "A news website project, including weather forecasts and currency prices.",
-              "badgeText": "Rolling Project",
-              "type": "News"
-            },
-            "3": {
-              "title": "Rolling Ubisoft",
-              "description": "A gaming page project inspired by the Ubisoft platform.",
-              "badgeText": "Rolling Project",
-              "type": "Video Games"
-            },
-            "4": {
-              "title": "Discord Bot",
-              "description": "Explore innovative projects and digital solutions that blend design, development, and technology to deliver unique experiences. Check out my portfolio.",
-              "badgeText": "Personal",
-              "type": "Personal Project"
-            },
-            "5": {
-              "title": "My Digital Portfolio",
-              "description": "Explore innovative projects and digital solutions that blend design, development, and technology to deliver unique experiences. Check out my portfolio.",
-              "badgeText": "Personal",
-              "type": "Personal Project"
-            }
+            "1": { "title": "Wonderful World", "description": "A travel blog project inviting us to discover different places around the world.", "badgeText": "Rolling Project", "type": "Travel Blog" },
+            "2": { "title": "Rolling News", "description": "A news website project, including weather forecasts and currency prices.", "badgeText": "Rolling Project", "type": "News" },
+            "3": { "title": "Rolling Ubisoft", "description": "A gaming page project inspired by the Ubisoft platform.", "badgeText": "Rolling Project", "type": "Video Games" },
+            "4": { "title": "Discord Bot", "description": "Explore innovative projects and digital solutions that blend design, development, and technology to deliver unique experiences. Check out my portfolio.", "badgeText": "Personal", "type": "Personal Project" },
+            "5": { "title": "My Digital Portfolio", "description": "Explore innovative projects and digital solutions that blend design, development, and technology to deliver unique experiences. Check out my portfolio.", "badgeText": "Personal", "type": "Personal Project" }
           },
           "description2": "Feel free to get in touch with me by filling out the form.",
           "email": "Email",
@@ -127,6 +106,7 @@ i18next
           "downloadCV": "Descargar CV",
           "datosPersonales": "Datos Personales",
           "formacion": "Formación",
+          "experienciaLaboral": "Experiencia Laboral",
           "timelineFormacion": "Línea de tiempo de formación",
           "habilidades": "Habilidades",
           "portafolio": "Portafolio",
@@ -148,6 +128,9 @@ i18next
           "tecnicoITText": "Escuela Técnica N°5. 2015. Formación secundaria técnica con conocimientos en informática y tecnología.",
           "tecnicoReparacionPC": "Técnico en Reparación de PC",
           "tecnicoReparacionPCText": "UTN. 2014. Diagnóstico y reparación de hardware, sistemas operativos y solución de problemas en redes.",
+          "seccionAlumnosTitle": "Seccion Alumnos",
+          "seccionAlumnosDescription": "Atiendo y gestiono trámites estudiantiles. Además, brindo apoyo tecnológico y soporte técnico: diagnostico y soluciono incidentes, mantengo equipos y redes, y optimizo procesos con herramientas digitales.",
+          "seccionAlumnosDate": "2022 - Presente",
           "habilidadesDesarrollo": "Desarrollo",
           "habilidadesDiseno": "Diseño",
           "habilidadesPersonal": "Personal",
@@ -178,36 +161,11 @@ i18next
           "herramientasDigitales": "Manejo de herramientas digitales",
           "ingles": "Inglés",
           "projects": {
-            "1": {
-              "title": "Maravilloso Mundo",
-              "description": "Proyecto de un blog de viajes que nos invita a conocer distintos lugares del mundo.",
-              "badgeText": "Proyecto-Rolling",
-              "type": "Blog de viajes"
-            },
-            "2": {
-              "title": "Rolling News",
-              "description": "Proyecto de una página de noticias, pronóstico del tiempo y precio de moneda.",
-              "badgeText": "Proyecto-Rolling",
-              "type": "Noticias"
-            },
-            "3": {
-              "title": "Rolling Ubisoft",
-              "description": "Proyecto de una página de juegos basada en la plataforma Ubisoft.",
-              "badgeText": "Proyecto-Rolling",
-              "type": "Videojuegos"
-            },
-            "4": {
-              "title": "Discord Bot",
-              "description": "Un bot de Discord creado con JavaScript que permite asignar roles y enviar mensajes automáticos.",
-              "badgeText": "Personal",
-              "type": "Proyecto personal"
-            },
-            "5": {
-              "title": "Mi Portafolio Personal",
-              "description": "Explora proyectos innovadores y soluciones digitales que combinan diseño, desarrollo y tecnología para ofrecer experiencias únicas. Conoce mi portafolio",
-              "badgeText": "Personal",
-              "type": "Proyecto personal"
-            }
+            "1": { "title": "Maravilloso Mundo", "description": "Proyecto de un blog de viajes que nos invita a conocer distintos lugares del mundo.", "badgeText": "Proyecto-Rolling", "type": "Blog de viajes" },
+            "2": { "title": "Rolling News", "description": "Proyecto de una página de noticias, pronóstico del tiempo y precio de moneda.", "badgeText": "Proyecto-Rolling", "type": "Noticias" },
+            "3": { "title": "Rolling Ubisoft", "description": "Proyecto de una página de juegos basada en la plataforma Ubisoft.", "badgeText": "Proyecto-Rolling", "type": "Videojuegos" },
+            "4": { "title": "Discord Bot", "description": "Un bot de Discord creado con JavaScript que permite asignar roles y enviar mensajes automáticos.", "badgeText": "Personal", "type": "Proyecto personal" },
+            "5": { "title": "Mi Portafolio Personal", "description": "Explora proyectos innovadores y soluciones digitales que combinan diseño, desarrollo y tecnología para ofrecer experiencias únicas. Conoce mi portafolio", "badgeText": "Personal", "type": "Proyecto personal" }
           },
           "description2": "No dudes en ponerte en contacto conmigo completando el formulario.",
           "email": "Email",
