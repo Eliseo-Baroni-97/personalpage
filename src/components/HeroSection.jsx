@@ -5,12 +5,12 @@ import { useLanguage } from "../context/LanguageContext";
 const translations = {
   es: {
     name: "Sobre mí",
-    description: "Desarrollador full stack con experiencia en programación web. -- ¡ESTE ES EL TEST DE DEPLOY EN VIVO! --",
+    description: "Desarrollador full stack con experiencia en programación web. Dominio básico de varios lenguajes de programación. Capaz de autogestión eficaz en proyectos independientes y buenas habilidades de colaboración dentro de un equipo productivo.",
     downloadCV: "Descargar CV",
   },
   en: {
     name: "About me",
-    description: "Full stack developer with web programming experience. -- THIS IS THE LIVE DEPLOY TEST! --",
+    description: "Full stack developer with web programming experience. Basic mastery of various programming languages. Capable of effective self-management in independent projects and strong collaboration skills within a productive team.",
     downloadCV: "Download CV",
   },
 };
