@@ -4,12 +4,12 @@ import Card from "./Card";
 import TimelineItem from "./TimelineItem";
 import "./Timeline.css";
 
-const Timeline = ({ titleKey, items }) => {
+const Timeline = ({ titleKey, items, className }) => {
   const { t } = useTranslation();
 
   return (
     <div className="d-flex justify-content-center">
-      <Card title={t(titleKey)} className="p-5 mb-5 mx-0 card-custom timeline-content scroll-transparent">
+      <Card title={t(titleKey)} className={`p-5 mb-5 mx-0 card-custom timeline-content scroll-transparent ${className || ''}`}>
         <div className="">
           {items.map((item, index) => {
             // Construimos el texto final. Si hay fecha, la añadimos al principio.

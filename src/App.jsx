@@ -53,7 +53,7 @@ const App = () => {
       <Skills />
 
       <SectionTitle titleKey="experienciaLaboral" icon="fa-briefcase" id="experience"/> 
-      <Timeline titleKey="experienciaLaboral" items={experienceItems} />
+      <Timeline titleKey="experienciaLaboral" items={experienceItems} className="timeline-experiencia" />
 
       <SectionTitle titleKey="portafolio" icon="fa-solid fa-briefcase" id="projects"/>
       <Portfolio /> 

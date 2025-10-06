@@ -78,6 +78,10 @@ body {
 
 }
 
+.timeline-experiencia {
+  max-height: none;
+}
+
 .title {
   color: #39bb9d;
   position: relative;
