@@ -98,7 +98,10 @@ i18next
           "subject": "Subject",
           "message": "Your message",
           "send": "Send",
-          "messageSent": "Message sent successfully!",
+          "sending": "Sending...",
+          "messageSentSuccess": "Message sent! I will get back to you shortly.",
+          "genericError": "An error occurred while sending the message.",
+          "networkError": "Could not send the message. Please check your connection.",
           "copyright": "Developed with ❤️ "
         }
       },
@@ -195,7 +198,10 @@ i18next
           "subject": "Asunto",
           "message": "Tu mensaje",
           "send": "Enviar",
-          "messageSent": "¡Mensaje enviado con éxito!",
+          "sending": "Enviando...",
+          "messageSentSuccess": "¡Mensaje enviado! Te responderé a la brevedad.",
+          "genericError": "Hubo un error al enviar el mensaje.",
+          "networkError": "No se pudo enviar. Verificá tu conexión.",
           "copyright": "Desarrollado con ❤️ "
         }
       }
