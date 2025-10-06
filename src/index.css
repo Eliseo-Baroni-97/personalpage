@@ -28,11 +28,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Elimino el display: flex para que no afecte todos los section */
 section {
   display: block;
-  margin-top: 0; /* Elimina el margen superior que estaba generando espacio innecesario */
-  height: auto;  /* Ajusta la altura según el contenido */
+  margin-top: 0;
+  height: auto;
 }
 
 h1 {
@@ -72,3 +71,34 @@ button:focus-visible {
   }
 }
 
+/* Custom transparent scrollbar */
+.scroll-transparent {
+  --scroll-thumb: var(--scroll-thumb, var(--brand-accent, var(--bs-primary, rgba(0,0,0,.35))));
+  scrollbar-color: var(--scroll-thumb) transparent;
+  scrollbar-width: thin;
+}
+
+@media (prefers-color-scheme: dark) {
+  .scroll-transparent {
+    --scroll-thumb: var(--scroll-thumb, var(--brand-accent-dark, var(--bs-primary-dark, rgba(255,255,255,.4))));
+  }
+}
+
+.scroll-transparent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-transparent::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.scroll-transparent::-webkit-scrollbar-corner {
+  background: transparent;
+}

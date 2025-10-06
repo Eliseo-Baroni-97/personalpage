@@ -10,7 +10,7 @@ const Timeline = ({ titleKey, items }) => {
   return (
     <div className="d-flex justify-content-center">
       <Card title={t(titleKey)} className="p-5 mb-5 mx-0 card-custom timeline-content">
-        <div className="">
+        <div className="scroll-transparent">
           {items.map((item, index) => {
             // Construimos el texto final. Si hay fecha, la añadimos al principio.
             const dateText = item.dateKey ? `${t(item.dateKey)}. ` : '';
