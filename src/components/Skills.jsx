@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next"; // Importamos el hook para las traducciones
+import { useTranslation } from "react-i18next";
 import Card from "./Card";
-import SkillItem from "./SkillItem"; // Asegúrate de importar SkillItem correctamente
+import SkillItem from "./SkillItem";
+import BrainIcon from "./BrainIcon"; // Importamos el nuevo ícono
 import "./Skills.css";
 
 const Skills = () => {
-  const { t } = useTranslation(); // Usamos el hook t para las traducciones
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("desarrollo");
 
   const handleTabClick = (tab) => setActiveTab(tab);
@@ -17,9 +18,8 @@ const Skills = () => {
       { icon: "fa-brands fa-bootstrap", name: "bootstrap" },
       { icon: "fa-brands fa-square-github", name: "git" },
       { icon: "fa-brands fa-js", name: "javascript" },
-      { icon: "fa-brands fa-openai", name: "desarrolloIA" },
-      { icon: "fa-laptop-code", name: "localstorage" },
-
+      // Usamos el componente BrainIcon para la habilidad de IA
+      { IconComponent: BrainIcon, name: "desarrolloIA" },
       { icon: "fa-laptop-code", name: "localstorage" },
       { icon: "fa-solid fa-mug-saucer", name: "java" },
       { icon: "fa-brands fa-react", name: "react" },
@@ -56,7 +56,7 @@ const Skills = () => {
                 onClick={() => handleTabClick(tab)}
                 className={`nav-link text-uppercase font-weight-bold rounded-0 ${activeTab === tab ? "active" : ""}`}
               >
-                {t(`habilidades${tab.charAt(0).toUpperCase() + tab.slice(1)}`)} {/* Cambié aquí */}
+                {t(`habilidades${tab.charAt(0).toUpperCase() + tab.slice(1)}`)}
               </button>
             </li>
           ))}
@@ -67,7 +67,12 @@ const Skills = () => {
             <div key={tab} className={`tab-pane fade ${activeTab === tab ? "show active" : ""}`}>
               <div className="row row-cols-2">
                 {skills.map((skill) => (
-                  <SkillItem key={skill.name} icon={skill.icon} name={t(skill.name)} />
+                  <SkillItem
+                    key={skill.name}
+                    icon={skill.icon} // Pasamos la clase del ícono
+                    IconComponent={skill.IconComponent} // Pasamos el componente de ícono
+                    name={t(skill.name)}
+                  />
                 ))}
               </div>
             </div>
@@ -79,4 +84,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
