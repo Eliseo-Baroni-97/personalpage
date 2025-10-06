@@ -99,9 +99,7 @@ i18next
           "message": "Your message",
           "send": "Send",
           "sending": "Sending...",
-          "messageSentSuccess": "Message sent! I will get back to you shortly.",
-          "genericError": "An error occurred while sending the message.",
-          "networkError": "Could not send the message. Please check your connection.",
+          "thanksForJoining": "Thanks for your message!",
           "copyright": "Developed with ❤️ "
         }
       },
@@ -199,9 +197,7 @@ i18next
           "message": "Tu mensaje",
           "send": "Enviar",
           "sending": "Enviando...",
-          "messageSentSuccess": "¡Mensaje enviado! Te responderé a la brevedad.",
-          "genericError": "Hubo un error al enviar el mensaje.",
-          "networkError": "No se pudo enviar. Verificá tu conexión.",
+          "thanksForJoining": "¡Gracias por tu mensaje!",
           "copyright": "Desarrollado con ❤️ "
         }
       }
