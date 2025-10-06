@@ -33,8 +33,8 @@ const App = () => {
 
   // Datos para la línea de tiempo de Experiencia Laboral
   const experienceItems = [
-    { titleKey: "seccionAlumnosTitle", textKey: "seccionAlumnosDescription", dateKey: "seccionAlumnosDate" },
     { titleKey: "fundacionSolTitle", textKey: "fundacionSolDescription", dateKey: "fundacionSolDate" },
+    { titleKey: "seccionAlumnosTitle", textKey: "seccionAlumnosDescription", dateKey: "seccionAlumnosDate" },
   ];
 
   return (
