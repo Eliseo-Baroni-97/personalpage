@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./Timeline.css"; // Usa los mismos estilos
 
@@ -13,11 +14,11 @@ const TimelineItem = ({ title, text, isEven, url, onItemClick }) => {
   const onClickHandler = url ? handleItemClick : null;
 
   return (
-    <div
-      className={`card ${isEven ? "even" : "odd"} ${isClickable}`}
-      onClick={onClickHandler}
-    >
-      <div className="info">
+    <div className={`card ${isEven ? "even" : "odd"}`}>
+      <div
+        className={`info ${isClickable}`}
+        onClick={onClickHandler}
+      >
         <h3 className="title">{title}</h3>
         <p>{text}</p>
       </div>
