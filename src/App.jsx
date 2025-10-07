@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,11 +14,23 @@ import Banner from "./components/Banner";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Modal from "./components/Modal";
 
 const App = () => {
   const { t } = useTranslation();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalUrl, setModalUrl] = useState("");
 
-  // Datos para la línea de tiempo de Formación
+  const handleOpenModal = (url) => {
+    setModalUrl(url);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setModalUrl("");
+  };
+
   const educationItems = [
     { titleKey: "licenciaturaCienciasComputacion", textKey: "licenciaturaCienciasComputacionText" },
     { titleKey: "iaCourseTitle", textKey: "iaCourseText", dateKey: "iaCourseDate", url: "https://drive.google.com/file/d/19n2xAiJxud1aJQhmiJGzC5feqDucpYn5/view" },
@@ -32,7 +44,6 @@ const App = () => {
     { titleKey: "tecnicoReparacionPC", textKey: "tecnicoReparacionPCText" },
   ];
 
-  // Datos para la línea de tiempo de Experiencia Laboral
   const experienceItems = [
     { titleKey: "fundacionSolTitle", textKey: "fundacionSolDescription", dateKey: "fundacionSolDate" },
     { titleKey: "seccionAlumnosTitle", textKey: "seccionAlumnosDescription", dateKey: "seccionAlumnosDate" },
@@ -47,7 +58,7 @@ const App = () => {
       <PersonalData />
       
       <SectionTitle titleKey="formacion" icon="fa-graduation-cap" id="education"/> 
-      <Timeline titleKey="timelineFormacion" items={educationItems} />
+      <Timeline titleKey="timelineFormacion" items={educationItems} onItemClick={handleOpenModal} />
 
       <SectionTitle titleKey="habilidades" icon="fa-regular fa-star" id="skills"  />
       <Skills />
@@ -60,6 +71,7 @@ const App = () => {
       <SectionTitle titleKey="contacto" icon="fa-paper-plane"  id="contact"/> 
       <Contact /> 
       <Footer />
+      <Modal isOpen={modalOpen} onClose={handleCloseModal} url={modalUrl} />
     </>
   );
 };

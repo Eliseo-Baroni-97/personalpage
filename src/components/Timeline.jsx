@@ -4,7 +4,7 @@ import Card from "./Card";
 import TimelineItem from "./TimelineItem";
 import "./Timeline.css";
 
-const Timeline = ({ titleKey, items, className }) => {
+const Timeline = ({ titleKey, items, className, onItemClick }) => {
   const { t } = useTranslation();
 
   return (
@@ -22,6 +22,7 @@ const Timeline = ({ titleKey, items, className }) => {
                 text={fullText}
                 isEven={index % 2 === 1}
                 url={item.url} // Pass the url prop
+                onItemClick={onItemClick} // Pass the click handler
               />
             );
           })}
