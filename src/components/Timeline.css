@@ -44,12 +44,12 @@ body {
 
 /* Posición del círculo en tarjetas impares */
 .card:nth-child(odd)::after {
-  left: -8px; /* Centrado sobre la línea vertical */
+  left: -5px; /* Centrado sobre la línea vertical */
 }
 
 /* Posición del círculo en tarjetas pares */
 .card:nth-child(even)::after {
-  right: -8px; /* Centrado sobre la línea vertical */
+  right: -5px; /* Centrado sobre la línea vertical */
 }
 
 /* Tarjetas impares: borde en el lado izquierdo con línea más gruesa */
@@ -101,7 +101,6 @@ body {
 
 .title {
   color: #39bb9d;
-  /* position: relative; ya no es necesario */
 }
 
 .card:nth-child(even) > .info > .title {
