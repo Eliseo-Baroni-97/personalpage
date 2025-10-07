@@ -22,19 +22,18 @@ const App = () => {
   const [modalUrl, setModalUrl] = useState("");
 
   const handleItemClick = (url) => {
-    // Si es un enlace de marcador de posición, no hacer nada.
-    if (url === "#") {
-      return;
+    // Solo actuar si la URL es un enlace válido y no un marcador de posición '#'
+    if (url && url !== "#") {
+      // Si es un PDF, abrir en una nueva pestaña
+      if (url.toLowerCase().endsWith('.pdf')) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      } else {
+        // Para cualquier otra URL válida, abrir en el modal
+        setModalUrl(url);
+        setModalOpen(true);
+      }
     }
-
-    // Si la URL es una ruta a un PDF, abrirlo en una nueva pestaña.
-    if (url.toLowerCase().endsWith('.pdf')) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    } else {
-      // Para cualquier otro tipo de URL, abrirla en el modal.
-      setModalUrl(url);
-      setModalOpen(true);
-    }
+    // Si la URL es '#' o no está definida, no se hace nada.
   };
 
   const handleCloseModal = () => {
@@ -75,7 +74,7 @@ const App = () => {
       <Skills />
 
       <SectionTitle titleKey="experienciaLaboral" icon="fa-briefcase" id="experience"/> 
-      <Timeline titleKey="experienciaLaboral" items={experienceItems} className="timeline-experiencia" />
+      <Timeline titleKey="experienciaLaboral" items={experienceItems} className="timeline-experiencia" onItemClick={handleItemClick} />
 
       <SectionTitle titleKey="portafolio" icon="fa-solid fa-briefcase" id="projects"/>
       <Portfolio /> 
