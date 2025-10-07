@@ -16,8 +16,9 @@ i18n.use(initReactI18next).init({
         // HeroSection
         holaSoy: "Hello, I'm",
         desarrolladorWeb: "Web Developer",
+        description: "Full stack developer focused on web and advanced student of the Bachelor's degree in Informatics. I transform needs into functional solutions with performance, accessibility, and maintainability. End-to-end experience, documentation, and support.",
         // PersonalData
-        nombre: "Name",
+        nombre: "Eliseo Daniel Baroni",
         fechaNacimiento: "Date of Birth",
         nacionalidad: "Nationality",
         residencia: "Residence",
@@ -135,8 +136,9 @@ i18n.use(initReactI18next).init({
         // HeroSection
         holaSoy: "Hola, soy",
         desarrolladorWeb: "Desarrollador Web",
+        description: "Desarrollador full stack enfocado en web y estudiante avanzado de la carrera de Lic. en Informática. Transformo necesidades en soluciones funcionales con performance, accesibilidad y mantenibilidad. Experiencia end-to-end, documentación y soporte.",
         // PersonalData
-        nombre: "Nombre",
+        nombre: "Eliseo Daniel Baroni",
         fechaNacimiento: "Fecha de Nacimiento",
         nacionalidad: "Nacionalidad",
         residencia: "Residencia",
