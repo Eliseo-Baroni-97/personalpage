@@ -33,7 +33,7 @@ const App = () => {
 
   const educationItems = [
     { titleKey: "licenciaturaCienciasComputacion", textKey: "licenciaturaCienciasComputacionText", url: "#" },
-    { titleKey: "iaCourseTitle", textKey: "iaCourseText", dateKey: "iaCourseDate", url: "https://drive.google.com/file/d/19n2xAiJxud1aJQhmiJGzC5feqDucpYn5/view?usp=sharing" },
+    { titleKey: "iaCourseTitle", textKey: "iaCourseText", dateKey: "iaCourseDate", url: "/certificates/Curso de Iniciacion al Desarrollo con IA.pdf" },
     { titleKey: "englishForDevelopersTitle", textKey: "englishForDevelopersText", dateKey: "englishForDevelopersDate", url: "#" },
     { titleKey: "jovenInversorTitle", textKey: "jovenInversorText", dateKey: "jovenInversorDate", url: "#" },
     { titleKey: "programadorFullStack", textKey: "programadorFullStackText", url: "#" },
