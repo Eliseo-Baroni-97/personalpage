@@ -21,7 +21,7 @@ const App = () => {
   // Datos para la línea de tiempo de Formación
   const educationItems = [
     { titleKey: "licenciaturaCienciasComputacion", textKey: "licenciaturaCienciasComputacionText" },
-    { titleKey: "iaCourseTitle", textKey: "iaCourseText", dateKey: "iaCourseDate" },
+    { titleKey: "iaCourseTitle", textKey: "iaCourseText", dateKey: "iaCourseDate", url: "https://drive.google.com/file/d/19n2xAiJxud1aJQhmiJGzC5feqDucpYn5/view" },
     { titleKey: "englishForDevelopersTitle", textKey: "englishForDevelopersText", dateKey: "englishForDevelopersDate" },
     { titleKey: "jovenInversorTitle", textKey: "jovenInversorText", dateKey: "jovenInversorDate" },
     { titleKey: "programadorFullStack", textKey: "programadorFullStackText" },

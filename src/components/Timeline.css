@@ -132,3 +132,14 @@ body {
     max-width: 100% !important;  /* Asegura que la timeline ocupe todo el ancho */
   }
 }
+.timeline-item-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease-in-out;
+}
+
+.timeline-item-link:hover .card {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+}

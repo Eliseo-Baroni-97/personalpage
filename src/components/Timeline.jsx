@@ -12,16 +12,16 @@ const Timeline = ({ titleKey, items, className }) => {
       <Card title={t(titleKey)} className={`p-5 mb-5 mx-0 card-custom timeline-content scroll-transparent ${className || ''}`}>
         <div className="">
           {items.map((item, index) => {
-            // Construimos el texto final. Si hay fecha, la añadimos al principio.
             const dateText = item.dateKey ? `${t(item.dateKey)}. ` : '';
             const fullText = `${dateText}${t(item.textKey)}`;
 
             return (
-              <TimelineItem 
-                key={index} 
-                title={t(item.titleKey)} 
-                text={fullText} 
-                isEven={index % 2 === 1} 
+              <TimelineItem
+                key={index}
+                title={t(item.titleKey)}
+                text={fullText}
+                isEven={index % 2 === 1}
+                url={item.url} // Pass the url prop
               />
             );
           })}
