@@ -32,16 +32,16 @@ const App = () => {
   };
 
   const educationItems = [
-    { titleKey: "licenciaturaCienciasComputacion", textKey: "licenciaturaCienciasComputacionText" },
+    { titleKey: "licenciaturaCienciasComputacion", textKey: "licenciaturaCienciasComputacionText", url: "#" },
     { titleKey: "iaCourseTitle", textKey: "iaCourseText", dateKey: "iaCourseDate", url: "https://drive.google.com/file/d/19n2xAiJxud1aJQhmiJGzC5feqDucpYn5/view" },
-    { titleKey: "englishForDevelopersTitle", textKey: "englishForDevelopersText", dateKey: "englishForDevelopersDate" },
-    { titleKey: "jovenInversorTitle", textKey: "jovenInversorText", dateKey: "jovenInversorDate" },
-    { titleKey: "programadorFullStack", textKey: "programadorFullStackText" },
-    { titleKey: "cursoInglesAdultos", textKey: "cursoInglesAdultosText" },
-    { titleKey: "analistaProgramador", textKey: "analistaProgramadorText" },
-    { titleKey: "ingenieriaSistemas", textKey: "ingenieriaSistemasText" },
-    { titleKey: "tecnicoIT", textKey: "tecnicoITText" },
-    { titleKey: "tecnicoReparacionPC", textKey: "tecnicoReparacionPCText" },
+    { titleKey: "englishForDevelopersTitle", textKey: "englishForDevelopersText", dateKey: "englishForDevelopersDate", url: "#" },
+    { titleKey: "jovenInversorTitle", textKey: "jovenInversorText", dateKey: "jovenInversorDate", url: "#" },
+    { titleKey: "programadorFullStack", textKey: "programadorFullStackText", url: "#" },
+    { titleKey: "cursoInglesAdultos", textKey: "cursoInglesAdultosText", url: "#" },
+    { titleKey: "analistaProgramador", textKey: "analistaProgramadorText", url: "#" },
+    { titleKey: "ingenieriaSistemas", textKey: "ingenieriaSistemasText", url: "#" },
+    { titleKey: "tecnicoIT", textKey: "tecnicoITText", url: "#" },
+    { titleKey: "tecnicoReparacionPC", textKey: "tecnicoReparacionPCText", url: "#" },
   ];
 
   const experienceItems = [
