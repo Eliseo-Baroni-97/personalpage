@@ -24,14 +24,9 @@ const App = () => {
   const handleItemClick = (url) => {
     // Solo actuar si la URL es un enlace válido y no un marcador de posición '#'
     if (url && url !== "#") {
-      // Si es un PDF, abrir en una nueva pestaña
-      if (url.toLowerCase().endsWith('.pdf')) {
-        window.open(url, '_blank', 'noopener,noreferrer');
-      } else {
-        // Para cualquier otra URL válida, abrir en el modal
-        setModalUrl(url);
-        setModalOpen(true);
-      }
+      // Para cualquier URL válida, abrir en el modal
+      setModalUrl(url);
+      setModalOpen(true);
     }
     // Si la URL es '#' o no está definida, no se hace nada.
   };
