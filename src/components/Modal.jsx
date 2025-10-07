@@ -6,8 +6,10 @@ const Modal = ({ isOpen, onClose, url }) => {
     return null;
   }
 
-  // Comprobar si la URL es de un archivo PDF
   const isPdf = url.toLowerCase().endsWith('.pdf');
+
+  // Si es un PDF, añadimos el parámetro para ocultar la barra de herramientas
+  const displayUrl = isPdf ? `${url}#toolbar=0` : url;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -15,8 +17,7 @@ const Modal = ({ isOpen, onClose, url }) => {
         <button className="modal-close" onClick={onClose}>          &times;
         </button>
         {isPdf ? (
-          <object data={url} type="application/pdf" className="modal-iframe">
-            {/* Fallback por si el navegador no puede mostrar el PDF */}
+          <object data={displayUrl} type="application/pdf" className="modal-iframe">
             <p>
               Tu navegador no puede mostrar este archivo PDF.
               <a href={url} target="_blank" rel="noopener noreferrer">
@@ -25,7 +26,7 @@ const Modal = ({ isOpen, onClose, url }) => {
             </p>
           </object>
         ) : (
-          <iframe src={url} title="Content" className="modal-iframe" />
+          <iframe src={displayUrl} title="Content" className="modal-iframe" />
         )}
       </div>
     </div>
