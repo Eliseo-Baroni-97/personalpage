@@ -21,9 +21,20 @@ const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalUrl, setModalUrl] = useState("");
 
-  const handleOpenModal = (url) => {
-    setModalUrl(url);
-    setModalOpen(true);
+  const handleItemClick = (url) => {
+    // Si es un enlace de marcador de posición, no hacer nada.
+    if (url === "#") {
+      return;
+    }
+
+    // Si la URL es una ruta a un PDF, abrirlo en una nueva pestaña.
+    if (url.toLowerCase().endsWith('.pdf')) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      // Para cualquier otro tipo de URL, abrirla en el modal.
+      setModalUrl(url);
+      setModalOpen(true);
+    }
   };
 
   const handleCloseModal = () => {
@@ -58,7 +69,7 @@ const App = () => {
       <PersonalData />
       
       <SectionTitle titleKey="formacion" icon="fa-graduation-cap" id="education"/> 
-      <Timeline titleKey="timelineFormacion" items={educationItems} onItemClick={handleOpenModal} />
+      <Timeline titleKey="timelineFormacion" items={educationItems} onItemClick={handleItemClick} />
 
       <SectionTitle titleKey="habilidades" icon="fa-regular fa-star" id="skills"  />
       <Skills />
