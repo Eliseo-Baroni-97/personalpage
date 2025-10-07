@@ -8,8 +8,8 @@ const Modal = ({ isOpen, onClose, url }) => {
 
   const isPdf = url.toLowerCase().endsWith('.pdf');
 
-  // Si es un PDF, añadimos el parámetro para ocultar la barra de herramientas
-  const displayUrl = isPdf ? `${url}#toolbar=0` : url;
+  // Si es un PDF, añadimos parámetros para ocultar la barra de herramientas y centrar el contenido.
+  const displayUrl = isPdf ? `${url}#toolbar=0&view=Fit` : url;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
