@@ -10,7 +10,6 @@ body {
   width: 100%; /* Se expande al ancho de la tarjeta mayor */
   max-width: none; /* Elimina cualquier restricción de ancho */
   border: none;
-  /* La transición se movió al .info para que solo se anime el cuadro de texto */
 }
 
 /* setting padding based on even or odd */
@@ -21,13 +20,36 @@ body {
   padding: 30px 30px 60px 0;
 }
 
-/* Global ::before */
+/* Línea vertical del timeline */
 .card::before {
-  z-index: 1; /* Un valor alto para que esté delante */
+  z-index: 1;
   content: "";
   position: absolute;
   width: 50%;
   border: solid #39bb9d;
+}
+
+/* Círculo del timeline (en ::after para que no se vea afectado por el zoom) */
+.card::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid #39bb9d;
+  z-index: 11;
+  top: 45px; /* Posición vertical fija */
+}
+
+/* Posición del círculo en tarjetas impares */
+.card:nth-child(odd)::after {
+  left: -8px; /* Centrado sobre la línea vertical */
+}
+
+/* Posición del círculo en tarjetas pares */
+.card:nth-child(even)::after {
+  right: -8px; /* Centrado sobre la línea vertical */
 }
 
 /* Tarjetas impares: borde en el lado izquierdo con línea más gruesa */
@@ -66,17 +88,11 @@ body {
 
 /* Estilo para el contenedor del Timeline */
 .timeline-content {
-  max-height: 500px; /* Ajusta la altura máxima según sea necesario */
-  overflow-y: auto;  /* Agrega el scroll vertical */
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-left: 30px;
   max-width: 100%;
-
-  max-height: 500px; /* Ajusta la altura máxima según sea necesario */
-  overflow-y: auto;  /* Agrega el scroll vertical */
-  overflow-x: hidden; /* Elimina el scroll horizontal */
-  padding-left: 30px;
-  max-width: 100%;  /* Asegura que no haya desbordes horizontales */
-
 }
 
 .timeline-experiencia {
@@ -85,31 +101,11 @@ body {
 
 .title {
   color: #39bb9d;
-  position: relative;
-}
-
-/* Punto del timeline */
-.title::before {
-  content: "";
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  background: white;
-  border-radius: 999px;
-  border: 3px solid #39bb9d;
-  z-index: 11;
+  /* position: relative; ya no es necesario */
 }
 
 .card:nth-child(even) > .info > .title {
   text-align: right;
-}
-
-.card:nth-child(odd) > .info > .title::before {
-  left: -45px;
-}
-
-.card:nth-child(even) > .info > .title::before {
-  right: -45px;
 }
 
 .info {
@@ -120,19 +116,16 @@ body {
   border-radius: 10px;
   padding: 10px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
-  /* Transición para el efecto hover */
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 /* Para pantallas pequeñas */
 @media only screen and (max-width: 767px) {
   .cardcustom {
-    width: 100% !important;  /* Aplica 100% de ancho para pantallas pequeñas */
+    width: 100% !important;
   }
-
-  /* También puedes ajustar el padding y otras propiedades para mejorar la apariencia */
   .timeline-content {
-    max-width: 100% !important;  /* Asegura que la timeline ocupe todo el ancho */
+    max-width: 100% !important;
   }
 }
 
@@ -142,7 +135,6 @@ body {
   color: inherit;
 }
 
-/* El hover se aplica ahora directamente al .info cuando tiene la clase .timeline-item-link */
 .info.timeline-item-link:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
