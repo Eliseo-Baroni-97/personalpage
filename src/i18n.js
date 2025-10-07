@@ -42,7 +42,7 @@ i18n.use(initReactI18next).init({
         // Education Items
         licenciaturaCienciasComputacion: "Bachelor of Informatics",
         licenciaturaCienciasComputacionText:
-          "I am an advanced student and in these years I learned to design and build software, to organize information to make decisions and to take care of the infrastructure so that everything works well. I am left with a way of working: order, clarity and focus on results, always as a team.",
+          "I am an advanced student of the major and in these years I learned to design and build software, to organize information to make decisions and to take care of the infrastructure so that everything works well. I am left with a way of working: order, clarity and focus on results, always as a team.",
         programadorFullStack: "Full Stack Programmer",
         programadorFullStackText:
           "RollingCode. 2020. Experience in web programming with tools and concepts such as Scrum methodology, HTML5, CSS3, Bootstrap 4, GIT, JavaScript, LocalStorage, React.js, MongoDB, among others.",
@@ -161,7 +161,7 @@ i18n.use(initReactI18next).init({
         // Education Items
         licenciaturaCienciasComputacion: "Licenciatura en Informatica",
         licenciaturaCienciasComputacionText:
-          "Soy estudiante avanzado y en estos años aprendí a diseñar y construir software, a organizar la información para tomar decisiones y a cuidar la infraestructura para que todo funcione bien. Me quedo con una forma de trabajo: orden, claridad y foco en resultados, siempre en equipo.",
+          "Soy estudiante avanzado de la carrera y en estos años aprendí a diseñar y construir software, a organizar la información para tomar decisiones y a cuidar la infraestructura para que todo funcione bien. Me quedo con una forma de trabajo: orden, claridad y foco en resultados, siempre en equipo.",
         programadorFullStack: "Programador Full Stack",
         programadorFullStackText:
           "RollingCode. 2020. Experiencia en programación web con herramientas y conceptos como metodología Scrum, HTML5, CSS3, Bootstrap 4, GIT, JavaScript, LocalStorage, React.js, MongoDB, entre otros.",
