@@ -108,6 +108,7 @@ body {
 }
 
 .info {
+  position: relative; /* Contexto para el pseudo-elemento de hitbox */
   display: flex;
   flex-direction: column;
   background: rgb(252, 252, 253);
@@ -116,6 +117,7 @@ body {
   padding: 10px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  will-change: transform, box-shadow; /* Optimización de rendimiento para la animación */
 }
 
 /* Para pantallas pequeñas */
@@ -132,6 +134,17 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+}
+
+/* Pseudo-elemento para expandir el área de hover (hitbox) */
+.info.timeline-item-link::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 10px;
 }
 
 .info.timeline-item-link:hover {
