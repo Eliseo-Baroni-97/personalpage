@@ -1,38 +1,67 @@
+/* El fondo que cubre toda la pantalla */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  /* Color de fondo oscuro y semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  /* Z-index muy alto para asegurar que esté por encima de todo, incluida la navbar */
+  z-index: 9999;
+  /* El efecto de desenfoque para el contenido que está detrás */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Para compatibilidad con Safari */
 }
 
+/* El contenedor del contenido del modal (el certificado) */
 .modal-content {
   position: relative;
   background: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 0; /* Quitamos el padding para que el contenido ocupe todo el espacio */
+  border-radius: 12px; /* Bordes un poco más redondeados */
   width: 90%;
   height: 90%;
   max-width: 1200px;
+  /* Sombra para que el modal "flote" sobre el fondo */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  /* Asegura que el contenido (el PDF) no se salga de los bordes redondeados */
+  overflow: hidden;
 }
 
+/* El botón para cerrar el modal */
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
+  top: 15px;
+  right: 15px;
+  background: rgba(20, 20, 20, 0.4); /* Fondo semitransparente */
+  color: white; /* La "X" en blanco */
+  border-radius: 50%; /* Botón circular */
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   font-size: 1.5rem;
+  line-height: 1;
   cursor: pointer;
+  /* Z-index para asegurar que esté por encima del contenido del modal */
+  z-index: 10;
+  transition: background-color 0.2s ease;
 }
 
+.modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Se oscurece al pasar el mouse */
+}
+
+/* El iframe o el object que contiene el documento */
 .modal-iframe {
   width: 100%;
   height: 100%;
   border: none;
+  display: block; /* Asegura que ocupe el espacio correctamente */
 }
