@@ -1,10 +1,16 @@
+@media only screen and (min-width: 768px) {
+  .cardcustom {
+    width: 90vw;
+    max-width: 1400px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
     .cardcustom {
-      width: 100% !important;  /* Aplica 100% de ancho para pantallas pequeñas */
+      width: 100% !important;
     }
-  
-    /* También puedes ajustar el padding y otras propiedades para mejorar la apariencia */
+
     .timeline {
-      max-width: 100% !important;  /* Asegura que la timeline ocupe todo el ancho */
+      max-width: 100% !important;
     }
   }
