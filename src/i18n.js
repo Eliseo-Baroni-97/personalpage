@@ -121,6 +121,17 @@ i18n.use(initReactI18next).init({
           "I am available to discuss new projects, collaborations, or job opportunities. Feel free to send me a message.",
         // Portfolio
         portfolioSubtitle: "Main Projects",
+        projects: {
+          1: {
+            badgeText: "Rolling Code",
+          },
+          2: {
+            badgeText: "Rolling Code",
+          },
+          3: {
+            badgeText: "Rolling Code",
+          },
+        },
       },
     },
     es: {
@@ -238,6 +249,17 @@ i18n.use(initReactI18next).init({
           "Estoy disponible para conversar sobre nuevos proyectos, colaboraciones o oportunidades laborales. No dudes en enviarme un mensaje.",
         // Portfolio
         portfolioSubtitle: "Proyectos Principales",
+        projects: {
+          1: {
+            badgeText: "Rolling Code",
+          },
+          2: {
+            badgeText: "Rolling Code",
+          },
+          3: {
+            badgeText: "Rolling Code",
+          },
+        },
       },
     },
   },

@@ -114,12 +114,12 @@ const Portfolio = () => {
                   <p className="small text-muted mb-0">{project.description}</p>
                 </div>
                 <div className="mt-auto p-4">
-                  <div className="d-flex align-items-center justify-content-center flex-wrap rounded-pill bg-light px-3 py-2">
-                    <p className="small mb-0 mx-1">
+                  <div className="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2">
+                    <p className="small mb-0">
                       <span className="font-weight-bold">{project.type}</span>
                     </p>
                     <div
-                      className={`badge ${project.badgeClass} mx-1 rounded-pill font-weight-normal`}
+                      className={`badge ${project.badgeClass} rounded-pill font-weight-normal`}
                     >
                       {project.badgeText}
                     </div>
