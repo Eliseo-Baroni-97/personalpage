@@ -87,7 +87,7 @@ const Portfolio = () => {
         <div className="row justify-content-center">
           {projects.map((project) => (
             <div
-              className="col-xl-4 col-lg-4 col-md-6 mb-4 d-flex justify-content-center"
+              className="col-xl-4 col-lg-4 col-md-4 mb-4 d-flex justify-content-center"
               key={project.id}
             >
               <Card
@@ -114,12 +114,12 @@ const Portfolio = () => {
                   <p className="small text-muted mb-0">{project.description}</p>
                 </div>
                 <div className="mt-auto p-4">
-                  <div className="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2">
-                    <p className="small mb-0">
+                  <div className="d-flex align-items-center justify-content-center flex-wrap rounded-pill bg-light px-3 py-2">
+                    <p className="small mb-0 mx-1">
                       <span className="font-weight-bold">{project.type}</span>
                     </p>
                     <div
-                      className={`badge ${project.badgeClass} ml-3 rounded-pill font-weight-normal`}
+                      className={`badge ${project.badgeClass} mx-1 rounded-pill font-weight-normal`}
                     >
                       {project.badgeText}
                     </div>
