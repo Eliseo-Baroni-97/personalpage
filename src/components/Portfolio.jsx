@@ -58,6 +58,29 @@ const Portfolio = () => {
     }
   ];
 
+  const isMobile = () => {
+    if (navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  const handleProjectClick = (e, url) => {
+    e.preventDefault();
+    if (isMobile() && url.endsWith('.pdf')) {
+      window.open(url, '_blank');
+    } else {
+      window.open(url, '_blank');
+    }
+  }
+
   return (
     <div className="d-flex justify-content-center align-items-center min-vh-100">
       <Card className="p-5 bg-white rounded shadow mb-5 cardcustom">
@@ -71,7 +94,7 @@ const Portfolio = () => {
                 className="bg-white rounded shadow d-flex flex-column h-100"
                 paddingClass={project.imgSrc ? "p-0" : "p-5"}
               >
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                <a href={project.url} onClick={(e) => handleProjectClick(e, project.url)} rel="noopener noreferrer">
                   <img
                     src={project.imgSrc}
                     alt={project.title}
@@ -84,7 +107,7 @@ const Portfolio = () => {
                 </a>
                 <div className="p-4 flex-grow-1">
                   <h5>
-                    <a href={project.url} target="_blank" className="text-dark">
+                    <a href={project.url} onClick={(e) => handleProjectClick(e, project.url)} className="text-dark">
                       {project.title}
                     </a>
                   </h5>
