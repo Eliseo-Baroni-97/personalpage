@@ -11,21 +11,17 @@ const Timeline = ({ titleKey, items, className, onItemClick }) => {
     <div className="d-flex justify-content-center">
       <Card title={t(titleKey)} className={`p-5 mb-5 mx-0 card-custom timeline-content scroll-transparent ${className || ''}`}>
         <div className="">
-          {items.map((item, index) => {
-            const dateText = item.dateKey ? `${t(item.dateKey)}. ` : '';
-            const fullText = `${dateText}${t(item.textKey)}`;
-
-            return (
-              <TimelineItem
-                key={index}
-                title={t(item.titleKey)}
-                text={fullText}
-                isEven={index % 2 === 1}
-                url={item.url} // Pass the url prop
-                onItemClick={onItemClick} // Pass the click handler
-              />
-            );
-          })}
+          {items.map((item, index) => (
+            <TimelineItem
+              key={index}
+              title={t(item.titleKey)}
+              subtitle={`${t(item.placeKey)} - ${t(item.dateKey)}`}
+              text={t(item.textKey)}
+              isEven={index % 2 === 1}
+              url={item.url} // Pass the url prop
+              onItemClick={onItemClick} // Pass the click handler
+            />
+          ))}
         </div>
       </Card>
     </div>

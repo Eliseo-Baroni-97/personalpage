@@ -103,7 +103,14 @@ body {
   color: #39bb9d;
 }
 
-.card:nth-child(even) > .info > .title {
+.subtitle {
+  color: #39bb9d; /* Color verde para el subtítulo */
+  font-style: italic;
+  margin-bottom: 5px; /* Espacio debajo del subtítulo */
+}
+
+.card:nth-child(even) > .info > .title,
+.card:nth-child(even) > .info > .subtitle {
   text-align: right;
 }
 

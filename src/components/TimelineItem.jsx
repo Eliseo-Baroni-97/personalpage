@@ -2,7 +2,7 @@
 import React from "react";
 import "./Timeline.css"; // Usa los mismos estilos
 
-const TimelineItem = ({ title, text, isEven, url, onItemClick }) => {
+const TimelineItem = ({ title, subtitle, text, isEven, url, onItemClick }) => {
   const handleItemClick = () => {
     if (url && onItemClick) {
       onItemClick(url);
@@ -20,6 +20,7 @@ const TimelineItem = ({ title, text, isEven, url, onItemClick }) => {
         onClick={onClickHandler}
       >
         <h3 className="title">{title}</h3>
+        <p className="subtitle">{subtitle}</p>
         <p>{text}</p>
       </div>
     </div>

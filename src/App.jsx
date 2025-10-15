@@ -22,13 +22,10 @@ const App = () => {
   const [modalUrl, setModalUrl] = useState("");
 
   const handleItemClick = (url) => {
-    // Solo actuar si la URL es un enlace válido y no un marcador de posición '#'
     if (url && url !== "#") {
-      // Para cualquier URL válida, abrir en el modal
       setModalUrl(url);
       setModalOpen(true);
     }
-    // Si la URL es '#' o no está definida, no se hace nada.
   };
 
   const handleCloseModal = () => {
@@ -37,21 +34,22 @@ const App = () => {
   };
 
   const educationItems = [
-    { titleKey: "licenciaturaCienciasComputacion", textKey: "licenciaturaCienciasComputacionText", url: "#" },
-    { titleKey: "iaCourseTitle", textKey: "iaCourseText", dateKey: "iaCourseDate", url: "/certificates/Curso de Iniciacion al Desarrollo con IA.pdf" },
-    { titleKey: "englishForDevelopersTitle", textKey: "englishForDevelopersText", dateKey: "englishForDevelopersDate", url: "#" },
-    { titleKey: "jovenInversorTitle", textKey: "jovenInversorText", dateKey: "jovenInversorDate", url: "#" },
-    { titleKey: "programadorFullStack", textKey: "programadorFullStackText", url: "#" },
-    { titleKey: "cursoInglesAdultos", textKey: "cursoInglesAdultosText", url: "#" },
-    { titleKey: "analistaProgramador", textKey: "analistaProgramadorText", url: "#" },
-    { titleKey: "ingenieriaSistemas", textKey: "ingenieriaSistemasText", url: "#" },
-    { titleKey: "tecnicoIT", textKey: "tecnicoITText", url: "#" },
-    { titleKey: "tecnicoReparacionPC", textKey: "tecnicoReparacionPCText", url: "#" },
+    { titleKey: "licenciaturaCienciasComputacionTitle", placeKey: "licenciaturaCienciasComputacionPlace", dateKey: "licenciaturaCienciasComputacionDate", textKey: "licenciaturaCienciasComputacionText", url: "#" },
+    { titleKey: "iaCourseTitle", placeKey: "iaCoursePlace", dateKey: "iaCourseDate", textKey: "iaCourseText", url: "/certificates/Curso de Iniciacion al Desarrollo con IA.pdf" },
+    { titleKey: "englishForDevelopersTitle", placeKey: "englishForDevelopersPlace", dateKey: "englishForDevelopersDate", textKey: "englishForDevelopersText", url: "#" },
+    { titleKey: "jovenInversorTitle", placeKey: "jovenInversorPlace", dateKey: "jovenInversorDate", textKey: "jovenInversorText", url: "#" },
+    { titleKey: "programadorFullStackTitle", placeKey: "programadorFullStackPlace", dateKey: "programadorFullStackDate", textKey: "programadorFullStackText", url: "#" },
+    { titleKey: "cursoInglesAdultosTitle", placeKey: "cursoInglesAdultosPlace", dateKey: "cursoInglesAdultosDate", textKey: "cursoInglesAdultosText", url: "/certificates/aticana.pdf" },
+    { titleKey: "introduccionPentestingTitle", placeKey: "introduccionPentestingPlace", dateKey: "introduccionPentestingDate", textKey: "introduccionPentestingText", url: "/certificates/Introduccion al Pentesting.pdf" },
+    { titleKey: "analistaProgramadorTitle", placeKey: "analistaProgramadorPlace", dateKey: "analistaProgramadorDate", textKey: "analistaProgramadorText", url: "#" },
+    { titleKey: "ingenieriaSistemasTitle", placeKey: "ingenieriaSistemasPlace", dateKey: "ingenieriaSistemasDate", textKey: "ingenieriaSistemasText", url: "#" },
+    { titleKey: "tecnicoITTitle", placeKey: "tecnicoITPlace", dateKey: "tecnicoITDate", textKey: "tecnicoITText", url: "/certificates/TituloSec.pdf" },
+    { titleKey: "tecnicoReparacionPCTitle", placeKey: "tecnicoReparacionPCPlace", dateKey: "tecnicoReparacionPCDate", textKey: "tecnicoReparacionPCText", url: "/certificates/Reparador-de-Pc.pdf" },
   ];
 
   const experienceItems = [
-    { titleKey: "fundacionSolTitle", textKey: "fundacionSolDescription", dateKey: "fundacionSolDate" },
-    { titleKey: "seccionAlumnosTitle", textKey: "seccionAlumnosDescription", dateKey: "seccionAlumnosDate" },
+    { titleKey: "fundacionSolTitle", placeKey: "fundacionSolPlace", dateKey: "fundacionSolDate", textKey: "fundacionSolDescription" },
+    { titleKey: "seccionAlumnosTitle", placeKey: "seccionAlumnosPlace", dateKey: "seccionAlumnosDate", textKey: "seccionAlumnosDescription" },
   ];
 
   return (
@@ -69,7 +67,7 @@ const App = () => {
       <Skills />
 
       <SectionTitle titleKey="experienciaLaboral" icon="fa-briefcase" id="experience"/> 
-      <Timeline titleKey="experienciaLaboral" items={experienceItems} className="timeline-experiencia" onItemClick={handleItemClick} />
+      <Timeline titleKey="timelineExperiencia" items={experienceItems} className="timeline-experiencia" onItemClick={handleItemClick} />
 
       <SectionTitle titleKey="portafolio" icon="fa-solid fa-briefcase" id="projects"/>
       <Portfolio /> 

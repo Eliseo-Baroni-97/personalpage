@@ -31,10 +31,9 @@ const HeroSection = () => {
 
         {/* Columna del texto */}
         <div className="col-md-6 text-container">
-          <h1>{t('name')}</h1>
           <p className="my-4">{t('description')}</p>
           <a href="https://drive.google.com/file/d/1mrIBSq0ASkKxcSVhk6bIHdTfly5Tkc9J/view?usp=sharing">
-            <button className="btn btn-outline-success btn-lg">{t('downloadCV')}</button>
+            <button className="btn btn-outline-success btn-lg">{t('descargarCV')}</button>
           </a>
         </div>
 

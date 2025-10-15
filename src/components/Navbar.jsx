@@ -70,33 +70,33 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav me-auto d-flex flex-column flex-lg-row gap-4 mt-4 mt-lg-0">
             <li className="nav-item">
-              <Link className="nav-link text-light fs-5" to="home" smooth={true} duration={500} offset={-120} onClick={closeNavbar}>
-                {t("home")}
+              <Link className="nav-link text-light fs-5" to="home" smooth={true} duration={500} offset={-120} onClick={closeNavbar} activeClass="active">
+                {t("inicio")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light fs-5" to="profile" smooth={true} duration={500} offset={-120} onClick={closeNavbar}>
-                {t("profile")}
+              <Link className="nav-link text-light fs-5" to="profile" smooth={true} duration={500} offset={-120} onClick={closeNavbar} activeClass="active">
+                {t("datosPersonales")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light fs-5" to="education" smooth={true} duration={500} offset={-120} onClick={closeNavbar}>
-                {t("education")}
+              <Link className="nav-link text-light fs-5" to="education" smooth={true} duration={500} offset={-120} onClick={closeNavbar} activeClass="active">
+                {t("formacion")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light fs-5" to="skills" smooth={true} duration={500} offset={-120} onClick={closeNavbar}>
-                {t("skills")}
+              <Link className="nav-link text-light fs-5" to="skills" smooth={true} duration={500} offset={-120} onClick={closeNavbar} activeClass="active">
+                {t("habilidades")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light fs-5" to="projects" smooth={true} duration={500} offset={-120} onClick={closeNavbar}>
-                {t("projectsLink")}
+              <Link className="nav-link text-light fs-5" to="projects" smooth={true} duration={500} offset={-120} onClick={closeNavbar} activeClass="active">
+                {t("portafolio")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light fs-5" to="contact" smooth={true} duration={500} offset={-120} onClick={closeNavbar}>
-                {t("contact")}
+              <Link className="nav-link text-light fs-5" to="contact" smooth={true} duration={500} offset={-120} onClick={closeNavbar} activeClass="active">
+                {t("contacto")}
               </Link>
             </li>
           </ul>
